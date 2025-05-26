@@ -12,11 +12,6 @@ import { siteConfig } from "@/config/site";
 import { ModalProvider } from "@/providers/modal-provider";
 import { cn } from "@/lib/utils";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 // Font files are in src/assets/fonts directory
 const fontHeading = localFont({
   src: "../assets/fonts/CalSans-SemiBold.woff2",
@@ -105,9 +100,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
           fontHeading.variable
         )}
+        style={{ fontFamily: 'sans-serif' }}
       >
         <ThemeProvider
           attribute="class"

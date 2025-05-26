@@ -5,10 +5,10 @@ import { ReactNode } from "react";
 
 interface AnimatedSectionProps {
   children: ReactNode;
-  className?: string;
+  className: string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
-  id?: string;
+  id: string;
 }
 
 export const AnimatedSection = ({
