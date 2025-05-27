@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ElementType, ReactNode } from "react";
 
 interface AnimatedTextProps {
   children: ReactNode;
@@ -29,10 +29,10 @@ const textVariants = {
 export const AnimatedText = ({
   children,
   delay = 0,
-  className = "",
+  className,
   as = "div",
 }: AnimatedTextProps) => {
-  const Component = motion[as];
+  const Component = motion(as) as ElementType;
 
   return (
     <Component

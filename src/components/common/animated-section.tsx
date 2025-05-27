@@ -1,31 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { ReactNode } from "react";
 
-interface AnimatedSectionProps {
+interface AnimatedSectionProps extends HTMLMotionProps<"div"> {
   children: ReactNode;
-  className: string;
+  className?: string | undefined;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
-  id: string;
+  id?: string;
+  key?: any;
 }
 
 export const AnimatedSection = ({
   children,
-  className = "",
+  className,
   delay = 0,
   direction = "up",
   id,
-}: AnimatedSectionProps) => {
-  const directionOffset = {
-    up: { y: 50 },
-    down: { y: -50 },
-    left: { x: 50 },
-    right: { x: -50 },
+  ...rest
+}: any) => {
+  const getOffset = (direction: string) => {
+    switch (direction) {
+      case "up":
+        return { y: 50 };
+      case "down":
+        return { y: -50 };
+      case "left":
+        return { x: 50 };
+      case "right":
+        return { x: -50 };
+      default:
+        return {};
+    }
   };
 
-  const initialOffset = directionOffset[direction];
+  const initialOffset = getOffset(direction);
 
   return (
     <motion.div
@@ -43,6 +53,7 @@ export const AnimatedSection = ({
         },
       }}
       viewport={{ once: true, margin: "-100px" }}
+      {...rest}
     >
       {children}
     </motion.div>

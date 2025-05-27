@@ -16,7 +16,7 @@ export const ScrollAnimation = ({
 }: ScrollAnimationProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: ref as React.RefObject<HTMLElement>,
     offset: ["start end", "end start"],
   });
 
@@ -43,8 +43,10 @@ export const ScrollAnimation = ({
   })();
 
   return (
-    <motion.div ref={ref} className={className} style={animationStyle}>
-      {children}
-    </motion.div>
+    <div ref={ref} className={className}>
+      <motion.div style={animationStyle}>
+        {children}
+      </motion.div>
+    </div>
   );
 };
