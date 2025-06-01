@@ -39,4 +39,7 @@ export const Contact = {
   GITHUB: "https://github.com/YashVekariyaa",
   EMAIL: "vekariyayash33@gmail.com",
   PHONE: "+91 9081133075",
+  WHATSAPPTEXT:
+    "I'd like to get more information about the services you provide.",
+  WHATSAPPNUMBER: "919081133075",
 };

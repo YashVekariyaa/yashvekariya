@@ -143,8 +143,8 @@ export function ContactForm() {
           </form>
         </Form>
       </div>
-      
-      <div className="rounded-lg p-8 h-full flex flex-col justify-start">
+
+      <div className="rounded-lg p-0 xl:p-8 h-full flex flex-col justify-start">
         <div className="space-y-6">
           <div className="flex items-center gap-4">
             <div className="p-3 rounded-full bg-primary/10">
@@ -155,7 +155,7 @@ export function ContactForm() {
               <Link href={`mailto:${Contact.EMAIL}`} className="font-medium">{Contact.EMAIL}</Link>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="p-3 rounded-full bg-primary/10">
               <Phone className="h-6 w-6 text-primary" />

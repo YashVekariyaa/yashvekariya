@@ -11,6 +11,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
 import { ModalProvider } from "@/providers/modal-provider";
 import { cn } from "@/lib/utils";
+import { Contact } from "@/config/socials";
 
 // Font files are in src/assets/fonts directory
 const fontHeading = localFont({
@@ -143,6 +144,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
             }}
           />
         )}
+        <a href={`https://wa.me/${Contact.WHATSAPPNUMBER}?text=${Contact.WHATSAPPTEXT}`} target="_blank" className="fixed bottom-12 right-12 z-50">
+          <div className="flex items-center p-2 justify-center w-11 h-11 bg-green-500 rounded-full shadow-lg transition duration-200 hover:bg-green-600 !animate-pulse">
+            <img src="https://uploads-ssl.webflow.com/62b5ca109278e030a060e942/62bf28776d90ec6fa2bec0f4_iconmonstr-whatsapp-1-240.png" alt="WhatsApp" className="w-14" />
+          </div>
+        </a>
       </body>
     </html>
   );
