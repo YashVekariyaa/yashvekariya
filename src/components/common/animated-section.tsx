@@ -52,7 +52,7 @@ export const AnimatedSection = ({
           ease: "easeOut",
         },
       }}
-      viewport={{ once: true, margin: "-100px" }}
+      // viewport={{ once: true, margin: "-100px" }}
       {...rest}
     >
       {children}

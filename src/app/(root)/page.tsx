@@ -74,7 +74,7 @@ export default function IndexPage() {
       />
 
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Image
             src={yashImg}
             height={100}
@@ -104,7 +104,7 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
+          <div className="flex flex-col mt-4 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
                 href={"/portfolio"}
@@ -165,10 +165,10 @@ export default function IndexPage() {
       </AnimatedSection>
       <AnimatedSection
         direction="right"
-        className="container space-y-6 py-10 my-14"
+        className="space-y-6 py-10 my-14"
         id="portfolio"
       >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <div className="flex flex-col items-center space-y-4 text-center">
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
@@ -183,7 +183,7 @@ export default function IndexPage() {
             {pagesConfig.portfolio.description}
           </AnimatedText>
         </div>
-        <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
+        <div className="mx-auto grid w-full justify-center gap-4 md:w-full lg:grid-cols-3">
           {featuredPortfolios.map((port, index) => (
             <AnimatedSection
               key={port.id}
@@ -202,7 +202,7 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-      <AnimatedSection
+      {/* <AnimatedSection
         direction="left"
         className="container space-y-6 bg-muted py-10 my-14"
         id="companies"
@@ -232,7 +232,7 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedSection
         direction="right"
         className="container space-y-6 py-10 my-14"

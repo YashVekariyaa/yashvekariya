@@ -93,7 +93,7 @@ export function MainNav({ items, children }: MainNavProps) {
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-          <span className="font-bold">Menu</span>
+          {/* <span className="font-bold">Menu</span> */}
         </button>
       </motion.div>
       {showMobileMenu && items && (
