@@ -149,7 +149,6 @@ export function ContactForm() {
           <div className="flex items-center gap-4">
             <div className="p-3 rounded-full bg-primary/10">
               <Mail className="h-6 w-6 text-primary" />
-
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Email</p>
