@@ -32,6 +32,7 @@ import {
   User,
   X,
   Zap,
+  Download
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
@@ -97,6 +98,7 @@ export const Icons = {
   laptop: Laptop,
   menu: Menu,
   chevronDown: ChevronDown,
+  download: Download,
   laughEmoji: BiLaugh,
   check: Check,
   infoMark: BsInfoCircle,

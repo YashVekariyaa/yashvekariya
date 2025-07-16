@@ -5,6 +5,7 @@ import * as React from "react";
 import { siteConfig } from "@/config/site";
 import { useLockBody } from "@/hooks/use-lock-body";
 import { cn } from "@/lib/utils";
+import { Icons } from "./icons";
 
 interface MobileNavProps {
   items: any[];
@@ -46,6 +47,16 @@ export function MobileNav({ items, children }: MobileNavProps) {
               {item.title}
             </Link>
           ))}
+          <a
+            href="/YashReactjs.pdf"
+            download
+            className={cn(
+              "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+            )}
+            aria-label="Download Yash Vekariya's CV"
+          >
+            <Icons.download className="w-4 h-4 mr-2" /> Download CV
+          </a>
         </nav>
         {children}
       </div>
