@@ -29,6 +29,7 @@ const SEO: React.FC = () => {
         name="keywords"
         content="Yash Vekariya, Full Stack Developer, Next.js, React, JavaScript, Portfolio"
       />
+      <meta name="google-site-verification" content="albtmD8pkqdVk3tm5Owkx5I3CSFoSWm-BNLRAGnMa48" />
       <meta name="author" content="Yash Vekariya" />
       <link rel="canonical" href={siteUrl} />
 
