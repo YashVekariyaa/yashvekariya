@@ -288,6 +288,64 @@ export const Portfolios: PortfolioInterface[] = [
       ],
     },
   },
+  {
+    id: "adopus",
+    companyName: "Ad Opus",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "UI/UX"],
+    shortDescription:
+      "Discover the latest job opportunities tailored for your skills and aspirations. Our user-friendly platform connects job seekers with employers looking for talent. Explore our blog for valuable insights, career advice, and industry trends to enhance your job search with expert tips. Manage your applications effortlessly with our intuitive dashboard, helping you stay organized and informed on your career path. Hear from our satisfied users in the testimonials section, showcasing real success stories from job seekers and employers who found their perfect match through our platform.",
+    websiteLink: "https://adopusrecruitment.com/",
+    techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
+    startDate: new Date("2022-03-01"),
+    endDate: new Date("2022-07-01"),
+    companyLogoImg: "/portfolio/adopus.png",
+    pagesInfoArr: [
+      {
+        title: "Blog Landing Page",
+        description:
+          "Modern and responsive landing page showcasing featured articles",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_2.webp"],
+      },
+      {
+        title: "Blog Listing",
+        description:
+          "Organized display of all blog posts with search and filtering",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_3.webp"],
+      },
+      {
+        title: "Category Navigation",
+        description: "Intuitive category-based navigation system",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_1.webp"],
+      },
+      {
+        title: "Article View",
+        description:
+          "Clean and readable article layout with rich media support",
+        imgArr: [
+          "/portfolio/builtdesign-blogs/blog_4.webp",
+          "/portfolio/builtdesign-blogs/blog_5.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "As part of the Builtdesign platform, I developed a sophisticated blog website that serves as a content hub for the company's thought leadership and industry insights. The project leveraged Next.js and React to create a fast, SEO-friendly platform.",
+        "The blog platform features a modern, responsive design that prioritizes readability and user engagement. I implemented a robust content management system using Netlify CMS, enabling the content team to easily publish and manage blog posts.",
+        "The architecture includes server-side rendering for optimal performance and SEO, while MongoDB provides flexible content storage. TypeScript ensures code reliability and maintainability throughout the application.",
+        "Key features include category-based navigation, search functionality, and a rich text editor for content creation. The platform supports various content types including images, code snippets, and embedded media.",
+      ],
+      bullets: [
+        "Developed a modern blog platform using Next.js and React with TypeScript",
+        "Implemented Netlify CMS for efficient content management",
+        "Created a responsive design that prioritizes readability and user engagement",
+        "Built server-side rendering for optimal performance and SEO",
+        "Integrated MongoDB for flexible content storage and management",
+        "Developed category-based navigation and search functionality",
+        "Implemented rich text editing capabilities for content creation",
+      ],
+    },
+  },
 ];
 
 export const featuredPortfolios = Portfolios.slice(0, 3);
