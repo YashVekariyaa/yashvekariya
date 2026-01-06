@@ -20,12 +20,12 @@ export const SocialLinks: SocialInterface[] = [
     icon: Icons.linkedin,
     link: "https://www.linkedin.com/in/yashvekariya/",
   },
-  {
-    name: "Twitter",
-    username: "@yashvekariya",
-    icon: Icons.twitter,
-    link: "https://x.com/yashvekariya33",
-  },
+  // {
+  //   name: "Twitter",
+  //   username: "@yashvekariya",
+  //   icon: Icons.twitter,
+  //   link: "https://x.com/yashvekariya33",
+  // },
   {
     name: "Gmail",
     username: "yashvekariya33",
