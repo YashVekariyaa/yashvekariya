@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "Yash Vekariya",
   authorName: "Yash Vekariya",
   username: "YashVekariyaa",
+  headerName: "Yash.",
   description:
     "Yash Vekariya's portfolio - A modern, responsive Next.js portfolio for developers. This open-source template can be customized to showcase your own skills, projects, and professional experience.",
   url: "https://nbarkiya.xyz",

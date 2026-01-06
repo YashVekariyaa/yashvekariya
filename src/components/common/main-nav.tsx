@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
@@ -54,9 +54,7 @@ export function MainNav({ items, children }: MainNavProps) {
         transition={{ duration: 0.5 }}
       >
         <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <span className={cn(norican.className, "text-2xl")}>
-            {siteConfig.authorName}
-          </span>
+          <h1 className="text-3xl font-heading">{siteConfig.headerName}</h1>
         </Link>
       </motion.div>
       {items?.length ? (
