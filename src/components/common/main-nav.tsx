@@ -10,6 +10,7 @@ import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import Cursor from "./Cusror";
 
 interface MainNavProps {
   items?: any[];
@@ -47,56 +48,58 @@ export function MainNav({ items, children }: MainNavProps) {
   }, [pathname]);
 
   return (
-    <div className="flex gap-6 md:gap-10">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <h1 className="text-3xl font-heading">{siteConfig.headerName}</h1>
-        </Link>
-      </motion.div>
-      {items?.length ? (
-        <nav className="hidden gap-6 md:flex items-center">
-          {items?.map((item, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={navItemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href={item.disabled ? "#" : item.href}
-                className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-                  item.href.startsWith(`/${segment}`)
-                    ? "text-foreground"
-                    : "text-foreground/60",
-                  item.disabled && "cursor-not-allowed opacity-80"
-                )}
-              >
-                {item.title}
-              </Link>
-            </motion.div>
-          ))}
-        </nav>
-      ) : null}
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <button
-          className="flex items-center space-x-2 md:hidden"
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
+    <>
+      <div className="flex gap-6 md:gap-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-          {/* <span className="font-bold">Menu</span> */}
-        </button>
-      </motion.div>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
-    </div>
+          <Link href="/" className="hidden items-center space-x-2 md:flex">
+            <h1 className="text-3xl font-heading">{siteConfig.headerName}</h1>
+          </Link>
+        </motion.div>
+        {items?.length ? (
+          <nav className="hidden gap-6 md:flex items-center">
+            {items?.map((item, index) => (
+              <motion.div
+                key={index}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={navItemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href={item.disabled ? "#" : item.href}
+                  className={cn(
+                    "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                    item.href.startsWith(`/${segment}`)
+                      ? "text-foreground"
+                      : "text-foreground/60",
+                    item.disabled && "cursor-not-allowed opacity-80"
+                  )}
+                >
+                  {item.title}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+        ) : null}
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <button
+            className="flex items-center space-x-2 md:hidden"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+          >
+            {showMobileMenu ? <Icons.close /> : <Icons.menu />}
+            {/* <span className="font-bold">Menu</span> */}
+          </button>
+        </motion.div>
+        {showMobileMenu && items && (
+          <MobileNav items={items}>{children}</MobileNav>
+        )}
+      </div>
+    </>
   );
 }

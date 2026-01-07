@@ -1,17 +1,16 @@
 import "./globals.css";
 
-import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
-import React from "react";
 import Script from "next/script";
+import React from "react";
 
 import { Analytics } from "@/components/common/analytics";
 import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
-import { ModalProvider } from "@/providers/modal-provider";
-import { cn } from "@/lib/utils";
 import { Contact } from "@/config/socials";
+import { cn } from "@/lib/utils";
+import { ModalProvider } from "@/providers/modal-provider";
 
 // Font files are in src/assets/fonts directory
 const fontHeading = localFont({
@@ -92,7 +91,6 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }: RootLayoutProps) {
   const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID;
 
@@ -103,7 +101,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           "min-h-screen bg-background font-sans antialiased",
           fontHeading.variable
         )}
-        style={{ fontFamily: 'sans-serif' }}
+        style={{ fontFamily: "sans-serif" }}
       >
         <ThemeProvider
           attribute="class"
@@ -144,12 +142,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
             }}
           />
         )}
-        <a href={`https://wa.me/${Contact.WHATSAPPNUMBER}?text=${Contact.WHATSAPPTEXT}`} target="_blank" className="fixed bottom-12 right-12 z-50">
+        <a
+          href={`https://wa.me/${Contact.WHATSAPPNUMBER}?text=${Contact.WHATSAPPTEXT}`}
+          target="_blank"
+          className="fixed bottom-12 right-12 z-50"
+        >
           <div className="flex items-center p-2 justify-center w-11 h-11 bg-green-500 rounded-full shadow-lg transition duration-200 hover:bg-green-600 !animate-pulse">
-            <img src="https://uploads-ssl.webflow.com/62b5ca109278e030a060e942/62bf28776d90ec6fa2bec0f4_iconmonstr-whatsapp-1-240.png" alt="WhatsApp" className="w-14" />
+            <img
+              src="https://uploads-ssl.webflow.com/62b5ca109278e030a060e942/62bf28776d90ec6fa2bec0f4_iconmonstr-whatsapp-1-240.png"
+              alt="WhatsApp"
+              className="w-14"
+            />
           </div>
         </a>
       </body>
     </html>
   );
-} 
+}
