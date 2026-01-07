@@ -1,4 +1,4 @@
-import Cursor from "@/components/common/Cusror";
+import Cursor from "@/components/common/Cursor";
 import { Icons } from "@/components/common/icons";
 import { MainNav } from "@/components/common/main-nav";
 import { ModeToggle } from "@/components/common/mode-toggle";

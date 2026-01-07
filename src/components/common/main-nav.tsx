@@ -10,7 +10,7 @@ import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import Cursor from "./Cusror";
+import Cursor from "./Cursor";
 
 interface MainNavProps {
   items?: any[];
