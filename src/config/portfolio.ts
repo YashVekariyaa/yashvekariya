@@ -346,6 +346,64 @@ export const Portfolios: PortfolioInterface[] = [
       ],
     },
   },
+  {
+    id: "saarthi_cabs",
+    companyName: "Saarthi Cabs",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "UI/UX"],
+    shortDescription:
+      "Experience the best in comfort, reliability, and convenience with Saarthi Cabs — your trusted partner for urban travel and intercity journeys. Whether you’re heading to work, catching a flight, or exploring new destinations, Saarthi Cabs connects you with professional drivers and quality vehicles that suit your needs.",
+    websiteLink: "https://saarthi-frontend-kappa.vercel.app",
+    techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
+    startDate: new Date("2022-03-01"),
+    endDate: new Date("2022-07-01"),
+    companyLogoImg: "/portfolio/saarthi-cabs.png",
+    pagesInfoArr: [
+      {
+        title: "Blog Landing Page",
+        description:
+          "Modern and responsive landing page showcasing featured articles",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_2.webp"],
+      },
+      {
+        title: "Blog Listing",
+        description:
+          "Organized display of all blog posts with search and filtering",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_3.webp"],
+      },
+      {
+        title: "Category Navigation",
+        description: "Intuitive category-based navigation system",
+        imgArr: ["/portfolio/builtdesign-blogs/blog_1.webp"],
+      },
+      {
+        title: "Article View",
+        description:
+          "Clean and readable article layout with rich media support",
+        imgArr: [
+          "/portfolio/builtdesign-blogs/blog_4.webp",
+          "/portfolio/builtdesign-blogs/blog_5.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "As part of the Builtdesign platform, I developed a sophisticated blog website that serves as a content hub for the company's thought leadership and industry insights. The project leveraged Next.js and React to create a fast, SEO-friendly platform.",
+        "The blog platform features a modern, responsive design that prioritizes readability and user engagement. I implemented a robust content management system using Netlify CMS, enabling the content team to easily publish and manage blog posts.",
+        "The architecture includes server-side rendering for optimal performance and SEO, while MongoDB provides flexible content storage. TypeScript ensures code reliability and maintainability throughout the application.",
+        "Key features include category-based navigation, search functionality, and a rich text editor for content creation. The platform supports various content types including images, code snippets, and embedded media.",
+      ],
+      bullets: [
+        "Developed a modern blog platform using Next.js and React with TypeScript",
+        "Implemented Netlify CMS for efficient content management",
+        "Created a responsive design that prioritizes readability and user engagement",
+        "Built server-side rendering for optimal performance and SEO",
+        "Integrated MongoDB for flexible content storage and management",
+        "Developed category-based navigation and search functionality",
+        "Implemented rich text editing capabilities for content creation",
+      ],
+    },
+  },
 ];
 
 export const featuredPortfolios = Portfolios.slice(0, 3);
